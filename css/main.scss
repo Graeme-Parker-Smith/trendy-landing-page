@@ -75,7 +75,7 @@ p {
     top: 30%;
     left: 30%;
     z-index: 1;
-    background: green;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .cursor {
@@ -86,4 +86,11 @@ p {
     border: 1px solid rgba(0, 0, 0, 0.4);
     margin-left: -1.5em;
     margin-top: -1.5em;
+}
+
+.letter {
+    display: inline-block;
+    line-height: 1em;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transform: translateY(-50px);
 }
