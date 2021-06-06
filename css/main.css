@@ -41,7 +41,8 @@ body:before {
   left: -15%;
   top: 15%;
 }
-.title .title-2, .title .title-3 {
+.title .title-2,
+.title .title-3 {
   position: relative;
   z-index: 2;
 }
@@ -57,8 +58,21 @@ p {
   width: 30%;
   height: 100vh;
   z-index: -1;
-  background-color: #dcdbc9;
+  background: #dcdbc9 url("../assets/girl.jpg.jpg");
+  background-size: cover;
+  mix-blend-mode: luminosity;
+  opacity: 0.17;
   right: 0;
+}
+
+.img {
+  position: absolute;
+  width: 16em;
+  height: 27em;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+  background: green;
 }
 
 /*# sourceMappingURL=main.css.map */
