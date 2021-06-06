@@ -25,8 +25,44 @@
 		<div class="img"></div>
 		<div class="cursor"></div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="hover.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+			integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+			integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="hover.js"></script>
+
+		<script>
+			var myAnimation = new hoverEffect({
+				parent: document.querySelector('.img'),
+				intensity: 0.3,
+				image1: 'assets/abstract-1.jpg',
+				image2: 'assets/abstract-2.jpg',
+				displacementImage: 'assets/dis.png',
+			});
+
+			let title = document.querySelector('.container');
+			let img = document.querySelector('.img');
+			let cursorCircle = document.querySelector('.cursor');
+
+			let cursor = {
+				x: 0,
+				y: 0,
+			};
+
+			document.addEventListener('mousemove', (e) => {
+				cursor.x = -e.clientX * 0.1;
+				cursor.y = -e.clientY * 0.1;
+
+				img.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+			});
+		</script>
 	</body>
 </html>
