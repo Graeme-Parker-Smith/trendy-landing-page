@@ -40,6 +40,8 @@
 		<script src="hover.js"></script>
 
 		<script>
+			let textWrapper = document.querySelector('.title');
+
 			var myAnimation = new hoverEffect({
 				parent: document.querySelector('.img'),
 				intensity: 0.3,
@@ -62,6 +64,7 @@
 				cursor.y = -e.clientY * 0.1;
 
 				img.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+				cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 			});
 		</script>
 	</body>
